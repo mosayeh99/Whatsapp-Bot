@@ -20,7 +20,7 @@ class MessageController extends Controller
 
             $this->chatFlowService->sendReply($message);
 
-            $this->getMessageService->myConsole($message['type']);
+//            $this->getMessageService->myConsole($message['type']);
 
             return response('EVENT_RECEIVED');
         } catch (\Exception $e) {

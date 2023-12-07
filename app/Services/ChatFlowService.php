@@ -7,7 +7,7 @@ use JsonException;
 
 class ChatFlowService
 {
-    public function __construct(public SendWelcomeMessage $sendWelcomeMessage, public SendProjectsListService $sendProjectsListService)
+    public function __construct(public SendWelcomeMessage $sendWelcomeMessage, public SendProjectsListService $sendProjectsListService, public GetMessageService $getMessageService)
     {
     }
 
@@ -19,6 +19,7 @@ class ChatFlowService
         if ($message['type'] === 'interactive') {
 
             if ($message['id'] === 'get_donations') {
+                $this->getMessageService->myConsole($message['type']);
                 $this->sendProjectsListService->sendProjectsList($message);
             }
 
