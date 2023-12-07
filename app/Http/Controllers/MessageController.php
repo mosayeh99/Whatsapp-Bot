@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\ChatFlowService;
 use App\Services\GetMessageService;
 use App\Services\SendMessageService;
 use Illuminate\Http\Request;
 
 class MessageController extends Controller
 {
-    public function __construct(public SendMessageService $sendMessageService, public GetMessageService $getMessageService)
+    public function __construct(public ChatFlowService $chatFlowService, public GetMessageService $getMessageService)
     {
     }
 
@@ -17,13 +18,9 @@ class MessageController extends Controller
         try {
             $message = $this->getMessageService->GetMessage($request);
 
-            if ($message['type'] = 'interactive') {
-                $this->sendMessageService->SendReplyButton($message);
-            } else {
-                $this->sendMessageService->SendTextMessage($message);
-            }
+            $this->chatFlowService->sendReply($message);
 
-            $this->getMessageService->myConsole($message['text']);
+            $this->getMessageService->myConsole($message['type']);
 
             return response('EVENT_RECEIVED');
         } catch (\Exception $e) {
