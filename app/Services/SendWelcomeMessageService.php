@@ -5,7 +5,7 @@ namespace App\Services;
 use Illuminate\Support\Facades\Http;
 use JsonException;
 
-class SendWelcomeMessage
+class SendWelcomeMessageService
 {
     public function __construct(public SendMessageRequestService $sendMessageRequestService)
     {
@@ -14,7 +14,7 @@ class SendWelcomeMessage
     /**
      * @throws JsonException
      */
-    public function __invoke($message): void
+    public function sendWelcomeMessage($message): void
     {
         $body = [
             "messaging_product" => "whatsapp",
@@ -54,6 +54,6 @@ class SendWelcomeMessage
             ]
         ];
 
-        $this->sendMessageRequestService->__invoke($body);
+        $this->sendMessageRequestService->sendMessageRequest($body);
     }
 }

@@ -1,0 +1,48 @@
+{
+    "object": "whatsapp_business_account",
+    "entry": [
+        {
+            "id": "193236347195536",
+            "changes": [
+                {
+                    "value": {
+                        "messaging_product": "whatsapp",
+                        "metadata": {
+                            "display_phone_number": "15550302848",
+                            "phone_number_id": "165361699997937"
+                        },
+                        "contacts": [
+                            {
+                                "profile": {
+                                    "name": "Mohamed Elsayeh"
+                                },
+                                "wa_id": "201200473780"
+                            }
+                        ],
+                        "messages": [
+                            {
+                                "context": {
+                                    "from": "15550302848",
+                                    "id": "wamid.HBgMMjAxMjAwNDczNzgwFQIAERgSRjE4QjJDMDlBQzhENkI5ODM5AA=="
+                                },
+                                "from": "201200473780",
+                                "id": "wamid.HBgMMjAxMjAwNDczNzgwFQIAEhggNDM5RUJFNTFDMjUxODgzNkFFNTY1NjcxMjAzMzU1NDEA",
+                                "timestamp": "1702195114",
+                                "type": "interactive",
+                                "interactive": {
+                                    "type": "list_reply",
+                                    "list_reply": {
+                                        "id": "get_water_projects",
+                                        "title": "Water",
+                                        "description": "Provide clean water, support 200-400 lives with sustainable wells."
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "field": "messages"
+                }
+            ]
+        }
+    ]
+}

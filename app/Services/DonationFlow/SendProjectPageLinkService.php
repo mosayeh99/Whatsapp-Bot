@@ -28,6 +28,6 @@ class SendProjectPageLinkService
             ]
         ];
 
-        $this->sendMessageRequestService->__invoke($body);
+        $this->sendMessageRequestService->sendMessageRequest($body);
     }
 }

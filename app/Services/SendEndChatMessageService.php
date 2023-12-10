@@ -38,8 +38,8 @@ class SendEndChatMessageService
                         [
                             "type" => "reply",
                             "reply" => [
-                                "id" => "get-previous-menu",
-                                "title" => "Previous Menu"
+                                "id" => "get-contacts",
+                                "title" => "Contact Us"
                             ]
                         ],
                         [
@@ -54,6 +54,6 @@ class SendEndChatMessageService
             ]
         ];
 
-        $this->sendMessageRequestService->__invoke($body);
+        $this->sendMessageRequestService->sendMessageRequest($body);
     }
 }

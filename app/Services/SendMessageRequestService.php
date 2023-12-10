@@ -10,7 +10,7 @@ class SendMessageRequestService
     /**
      * @throws JsonException
      */
-    public function __invoke($body): void
+    public function sendMessageRequest($body): void
     {
         Http::withHeaders([
             'Content-Type' => 'application/json',

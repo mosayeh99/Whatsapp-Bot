@@ -9,11 +9,11 @@ use JsonException;
 class ChatFlowService
 {
     public function __construct(
-        public SendWelcomeMessage $sendWelcomeMessage,
-        public SendEndChatMessageService $sendEndChatMessageService,
-        public SendProjectsListService $sendProjectsListService,
+        public SendWelcomeMessageService  $sendWelcomeMessageService,
+        public SendEndChatMessageService  $sendEndChatMessageService,
+        public SendProjectsListService    $sendProjectsListService,
         public SendProjectPageLinkService $sendProjectPageLinkService,
-        public GetMessageService $getMessageService
+        public GetMessageService          $getMessageService
     )
     {
     }
@@ -27,6 +27,12 @@ class ChatFlowService
 
             if ($message['id'] === 'get-donations') {
                 $this->sendProjectsListService->sendProjectsList($message);
+            } elseif ($message['id'] === 'get-main-menu') {
+
+            } elseif ($message['id'] === 'get-contacts') {
+
+            }elseif ($message['id'] === 'end-chat') {
+
             }
 
         } elseif ($message['interactiveType'] === 'list_reply') {
@@ -35,7 +41,7 @@ class ChatFlowService
             $this->sendEndChatMessageService->sendEndChatMessage($message);
 
         } else {
-            $this->sendWelcomeMessage->__invoke($message);
+            $this->sendWelcomeMessageService->sendWelcomeMessage($message);
         }
     }
 }

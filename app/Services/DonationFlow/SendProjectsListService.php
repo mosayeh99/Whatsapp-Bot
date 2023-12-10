@@ -86,6 +86,6 @@ class SendProjectsListService
             ]
         ];
 
-        $this->sendMessageRequestService->__invoke($body);
+        $this->sendMessageRequestService->sendMessageRequest($body);
     }
 }
