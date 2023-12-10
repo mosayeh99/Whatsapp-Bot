@@ -31,21 +31,21 @@ class SendWelcomeMessage
                         [
                             "type" => "reply",
                             "reply" => [
-                                "id" => "get_donations",
+                                "id" => "get-donations",
                                 "title" => "Donate"
                             ]
                         ],
                         [
                             "type" => "reply",
                             "reply" => [
-                                "id" => "get_donor_care",
+                                "id" => "get-donor-care",
                                 "title" => "Donor Care"
                             ]
                         ],
                         [
                             "type" => "reply",
                             "reply" => [
-                                "id" => "get_contact_details",
+                                "id" => "get-contact-details",
                                 "title" => "Contact Us"
                             ]
                         ]
