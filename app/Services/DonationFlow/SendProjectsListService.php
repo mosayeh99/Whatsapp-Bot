@@ -25,13 +25,13 @@ class SendProjectsListService
                 "type" => "list",
                 "header" => [
                     "type" => "text",
-                    "text" => "Please select a project"
+                    "text" => ""
                 ],
                 "body" => [
-                    "text" => "<BODY_TEXT>"
+                    "text" => "Empower Change: Make a Difference Today!\nChoose from the project menu."
                 ],
                 "footer" => [
-                    "text" => "<FOOTER_TEXT>"
+                    "text" => ""
                 ],
                 "action" => [
                     "button" => "Press here",
@@ -40,44 +40,44 @@ class SendProjectsListService
                             "title" => "Our Projects",
                             "rows" => [
                                 [
-                                    "id" => "get_crisis_projects",
+                                    "id" => "get-crisis-projects",
                                     "title" => "Crisis",
-                                    "description" => "Amid crisis, unite in compassion. Your donation, big or small, is a beacon of hope, restoring lives."
+                                    "description" => "Amid crisis, unite in compassion. Your donation restores hope, lives."
                                 ],
                                 [
-                                    "id" => "get_water_projects",
+                                    "id" => "get-water-projects",
                                     "title" => "Water",
-                                    "description" => "Provide easy access to clean water for the village, supports 200-400 individuals."
+                                    "description" => "Provide clean water, support 200-400 lives with sustainable wells."
                                 ],
                                 [
-                                    "id" => "get_education_projects",
+                                    "id" => "get-education-projects",
                                     "title" => "Education",
-                                    "description" => "Your support propels, enabling education for all and fostering a more empowered, educated Africa."
+                                    "description" => "Sponsor students, shape destinies, and empower dreams in Africa."
                                 ],
                                 [
-                                    "id" => "get_food_aid_projects",
+                                    "id" => "get-food-aid-projects",
                                     "title" => "Food Aid",
-                                    "description" => "Let’s Unite to Ensure No Neighbor Goes Hungry. In Africa, Two-Thirds Struggle with Food Insecurity."
+                                    "description" => "Unite against hunger in Africa! Your donation creates lasting impact."
                                 ],
                                 [
-                                    "id" => "get_medical_projects",
+                                    "id" => "get-medical-help-projects",
                                     "title" => "Medical Help",
-                                    "description" => "Your support fuels health initiatives in Africa for communities in need and empowers wellness."
+                                    "description" => "Donate for quality healthcare in Africa. Transform hope into action."
                                 ],
                                 [
-                                    "id" => "get_orphans_projects",
+                                    "id" => "get-orphans-projects",
                                     "title" => "Orphan Sponsorship",
-                                    "description" => "Sponsor an orphan in Africa, weaving a tapestry of care. Your support is a gift of hope."
+                                    "description" => "Orphans' needs surge; support wanes. Help bridge the gap."
                                 ],
                                 [
-                                    "id" => "get_zakat_projects",
+                                    "id" => "get-zakat-projects",
                                     "title" => "Zakat",
-                                    "description" => "See your impact within providing your Zakat and support vital projects in Africa."
+                                    "description" => "Zakat nurtures Africa projects, fostering hope in communities."
                                 ],
                                 [
-                                    "id" => "get_ramadan_projects",
+                                    "id" => "get-ramadan-projects",
                                     "title" => "Ramadan",
-                                    "description" => "Support our If-tar meals in Africa. Your contribution brings together hearts and plates for a meaningful Ramadan."
+                                    "description" => "Iftar meal fosters unity, kindness, creating bonds beyond hunger."
                                 ],
                             ]
                         ]
