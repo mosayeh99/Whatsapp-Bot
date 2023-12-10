@@ -45,7 +45,7 @@ class SendWelcomeMessageService
                         [
                             "type" => "reply",
                             "reply" => [
-                                "id" => "get-contact-details",
+                                "id" => "get-contacts",
                                 "title" => "Contact Us"
                             ]
                         ]

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\DonationFlow;
+namespace App\Services\DonationMessages;
 
 use App\Services\SendMessageRequestService;
 use Illuminate\Support\Str;

@@ -2,8 +2,10 @@
 
 namespace App\Services;
 
-use App\Services\DonationFlow\SendProjectPageLinkService;
-use App\Services\DonationFlow\SendProjectsListService;
+use App\Services\ContactsMessages\SendContactMessageService;
+use App\Services\ContactsMessages\SendLocationMessageService;
+use App\Services\DonationMessages\SendProjectPageLinkService;
+use App\Services\DonationMessages\SendProjectsListService;
 use JsonException;
 
 class ChatFlowService
@@ -11,6 +13,8 @@ class ChatFlowService
     public function __construct(
         public SendWelcomeMessageService  $sendWelcomeMessageService,
         public SendEndChatMessageService  $sendEndChatMessageService,
+        public SendContactMessageService  $sendContactMessageService,
+        public SendLocationMessageService $sendLocationMessageService,
         public SendProjectsListService    $sendProjectsListService,
         public SendProjectPageLinkService $sendProjectPageLinkService,
         public GetMessageService          $getMessageService
@@ -28,10 +32,11 @@ class ChatFlowService
             if ($message['id'] === 'get-donations') {
                 $this->sendProjectsListService->sendProjectsList($message);
             } elseif ($message['id'] === 'get-main-menu') {
-
+                $this->sendWelcomeMessageService->sendWelcomeMessage($message);
             } elseif ($message['id'] === 'get-contacts') {
-
-            }elseif ($message['id'] === 'end-chat') {
+                $this->sendContactMessageService->sendContactMessage($message);
+                $this->sendLocationMessageService->sendLocationMessage($message);
+            } elseif ($message['id'] === 'end-chat') {
 
             }
 
