@@ -20,6 +20,7 @@ class GetMessageService
 
         $messageId = '';
         $messageType = $message->type;
+        $interactiveType = '';
 
         if ($messageType === 'interactive') {
             $interactiveObject = $message->interactive;
@@ -37,7 +38,7 @@ class GetMessageService
         }
 
         return [
-            'type' => $messageType,
+            'interactiveType' => $interactiveType,
             'id' => $messageId,
             'senderName' => $senderName,
             'senderNumber' => $senderNumber
