@@ -23,7 +23,7 @@ class SendMenuReminderMessageService
             "type" => "text",
             "text" => [
                 "preview_url" => false,
-                "body" => "To assist you better, please choose from the options provided earlier. Simply click on the buttons for a faster response."
+                "body" => "Please choose from the options provided earlier. Simply click on the buttons for a faster response."
             ]
         ];
 
