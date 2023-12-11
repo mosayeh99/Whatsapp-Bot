@@ -34,7 +34,7 @@ class SendProjectsListService
                     "text" => ""
                 ],
                 "action" => [
-                    "button" => "Press here",
+                    "button" => "Click here",
                     "sections" => [
                         [
                             "title" => "Our Projects",

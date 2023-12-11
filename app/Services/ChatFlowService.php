@@ -6,6 +6,8 @@ use App\Services\ContactsMessages\SendContactMessageService;
 use App\Services\ContactsMessages\SendLocationMessageService;
 use App\Services\DonationMessages\SendProjectPageLinkService;
 use App\Services\DonationMessages\SendProjectsListService;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use JsonException;
 
 class ChatFlowService
@@ -13,6 +15,7 @@ class ChatFlowService
     public function __construct(
         public SendWelcomeMessageService        $sendWelcomeMessageService,
         public SendFlowCompletionMessageService $sendFlowCompletionMessageService,
+        public SendMenuReminderMessageService   $sendMenuReminderMessageService,
         public SendEndChatMessageService        $sendEndChatMessageService,
         public SendContactMessageService        $sendContactMessageService,
         public SendLocationMessageService       $sendLocationMessageService,
