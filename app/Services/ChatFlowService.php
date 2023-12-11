@@ -16,6 +16,7 @@ class ChatFlowService
         public SendEndChatMessageService        $sendEndChatMessageService,
         public SendContactMessageService        $sendContactMessageService,
         public SendLocationMessageService       $sendLocationMessageService,
+        public SendLiveChatMessageService       $sendLiveChatMessageService,
         public SendProjectsListService          $sendProjectsListService,
         public SendProjectPageLinkService       $sendProjectPageLinkService,
         public GetMessageService                $getMessageService
@@ -34,6 +35,8 @@ class ChatFlowService
                 $this->sendProjectsListService->sendProjectsList($message);
             } elseif ($message['id'] === 'get-main-menu') {
                 $this->sendWelcomeMessageService->sendWelcomeMessage($message);
+            }  elseif ($message['id'] === 'get-live-chat') {
+                $this->sendLiveChatMessageService->sendLiveChatMessage($message);
             } elseif ($message['id'] === 'get-contacts') {
                 $this->sendContactMessageService->sendContactMessage($message);
                 $this->sendLocationMessageService->sendLocationMessage($message);

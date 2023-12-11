@@ -38,8 +38,8 @@ class SendWelcomeMessageService
                         [
                             "type" => "reply",
                             "reply" => [
-                                "id" => "get-donor-care",
-                                "title" => "Donor Care"
+                                "id" => "get-live-chat",
+                                "title" => "Live Chat"
                             ]
                         ],
                         [

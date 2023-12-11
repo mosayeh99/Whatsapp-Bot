@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Services\ChatFlowService;
 use App\Services\GetMessageService;
-use App\Services\SendMessageService;
+use App\Services\SendLiveChatMessageService;
 use Illuminate\Http\Request;
 
 class MessageController extends Controller
