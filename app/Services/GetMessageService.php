@@ -21,6 +21,7 @@ class GetMessageService
         $messageId = '';
         $messageType = $message->type;
         $interactiveType = '';
+        $listReplyDescription = '';
 
         if ($messageType === 'interactive') {
             $interactiveObject = $message->interactive;
@@ -30,6 +31,7 @@ class GetMessageService
                 $messageId = $interactiveObject->button_reply->id;
             } elseif ($interactiveType === 'list_reply') {
                 $messageId = $interactiveObject->list_reply->id;
+                $listReplyDescription = $interactiveObject->list_reply->description;
             } else {
                 $this->myConsole('Wrong Message');
             }
@@ -40,6 +42,7 @@ class GetMessageService
         return [
             'interactiveType' => $interactiveType,
             'id' => $messageId,
+            'description' => $listReplyDescription,
             'senderName' => $senderName,
             'senderNumber' => $senderNumber
         ];

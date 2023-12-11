@@ -21,10 +21,51 @@ class SendProjectPageLinkService
 
         $body = [
             "messaging_product" => "whatsapp",
+            "recipient_type" => "individual",
             "to" => $message['senderNumber'],
-            "text" => [
-                "preview_url" => true,
-                "body" => "Please visit https://africa-relief.org/project-category/$projectSlug to donate."
+            "type" => "template",
+            "template" => [
+                "name" => "project_template",
+                "language" => [
+                    "code" => "en_US"
+                ],
+                "components" => [
+                    [
+                        "type" => "header",
+                        "parameters" => [
+                            [
+                                "type" => "image",
+                                "image" => [
+                                    "link" => "https://africa-relief.org/wp-content/uploads/2023/12/$projectSlug.jpg"
+                                ]
+                            ]
+                        ]
+                    ],
+                    [
+                        "type" => "body",
+                        "parameters" => [
+                            [
+                                "type" => "text",
+                                "text" => Str::ucfirst($projectSlug)
+                            ],
+                            [
+                                "type" => "text",
+                                "text" => $message['description'],
+                            ]
+                        ]
+                    ],
+                    [
+                        "type" => "BUTTON",
+                        "sub_type" => "URL",
+                        "index" => 0,
+                        "parameters" => [
+                            [
+                                "type" => "TEXT",
+                                "text" => $projectSlug
+                            ]
+                        ]
+                    ]
+                ]
             ]
         ];
 

@@ -19,7 +19,7 @@ class SendLocationMessageService
         $body = [
             "messaging_product" => "whatsapp",
             "recipient_type" => "individual",
-            "to" => "{{Recipient-Phone-Number}}",
+            "to" => $message['senderNumber'],
             "type" => "location",
             "location" => [
                 "latitude" => "40.8220369",

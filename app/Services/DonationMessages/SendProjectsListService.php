@@ -65,7 +65,7 @@ class SendProjectsListService
                                     "description" => "Donate for quality healthcare in Africa. Transform hope into action."
                                 ],
                                 [
-                                    "id" => "get-orphans-projects",
+                                    "id" => "get-orphan-sponsorship-projects",
                                     "title" => "Orphan Sponsorship",
                                     "description" => "Orphans' needs surge; support wanes. Help bridge the gap."
                                 ],
