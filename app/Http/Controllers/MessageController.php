@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Services\ChatFlowService;
 use App\Services\GetMessageService;
-use App\Services\SendLiveChatMessageService;
 use Illuminate\Http\Request;
 
 class MessageController extends Controller
@@ -20,7 +19,7 @@ class MessageController extends Controller
 
             $this->chatFlowService->sendReply($message);
 
-//            $this->getMessageService->myConsole($message['type']);
+            $this->getMessageService->myConsole($request);
 
             return response('EVENT_RECEIVED');
         } catch (\Exception $e) {

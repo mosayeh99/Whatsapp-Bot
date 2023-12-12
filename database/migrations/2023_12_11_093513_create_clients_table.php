@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('phone')->unique();
             $table->string('expected_next_msg_type')->nullable();
+            $table->timestamp('last_message_time');
             $table->timestamps();
         });
     }

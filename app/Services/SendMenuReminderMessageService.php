@@ -20,10 +20,23 @@ class SendMenuReminderMessageService
             "messaging_product" => "whatsapp",
             "recipient_type" => "individual",
             "to" => $message['senderNumber'],
-            "type" => "text",
-            "text" => [
-                "preview_url" => false,
-                "body" => "Please choose from the options provided earlier. Simply click on the buttons for a faster response."
+            "type" => "interactive",
+            "interactive" => [
+                "type" => "button",
+                "body" => [
+                    "text" => "Please choose from the previous menu.\nTo explore different choices, click the 'Main Menu' button."
+                ],
+                "action" => [
+                    "buttons" => [
+                        [
+                            "type" => "reply",
+                            "reply" => [
+                                "id" => "get-main-menu",
+                                "title" => "Main Menu"
+                            ]
+                        ]
+                    ]
+                ]
             ]
         ];
 

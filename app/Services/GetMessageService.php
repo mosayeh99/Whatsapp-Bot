@@ -35,6 +35,9 @@ class GetMessageService
             } else {
                 $this->myConsole('Wrong Message');
             }
+        } elseif ($messageType === 'button') {
+            $interactiveType = 'button_reply';
+            $messageId = 'get-main-menu';
         } else {
             $this->myConsole('Wrong Message');
         }

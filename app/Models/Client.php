@@ -12,6 +12,7 @@ class Client extends Model
     protected $fillable = [
         'name',
         'phone',
-        'expected_next_msg_type'
+        'expected_next_msg_type',
+        'last_message_time'
     ];
 }

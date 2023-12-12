@@ -27,7 +27,7 @@ class SendProjectPageLinkService
             "template" => [
                 "name" => "project_template",
                 "language" => [
-                    "code" => "en_US"
+                    "code" => "en"
                 ],
                 "components" => [
                     [
