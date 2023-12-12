@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\LiveChatMessages;
 
-use Illuminate\Support\Facades\Http;
+use App\Services\SendMessageRequestService;
 use JsonException;
 
 class SendLiveChatMessageService
@@ -23,7 +23,7 @@ class SendLiveChatMessageService
             "type" => "text",
             "text" => [
                 "preview_url" => false,
-                "body" => "Thanks for contacting us! A presenter will call you shortly. In the meantime, could you share a bit more about your issue for a faster response? Your input helps us assist you better."
+                "body" => "Thanks for contacting us! A presenter will call you shortly. In the meantime, you could share a bit more about your issue for a faster response."
             ]
         ];
 
